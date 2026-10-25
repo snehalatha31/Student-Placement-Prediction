@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Placement Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Placement Result</h1>
+
+
+    {% if error %}
+
+        <div class="error">
+
+            <h2>Error</h2>
+
+            <p>{{ error }}</p>
+
+        </div>
+
+    {% else %}
+
+
+        {% if result == "Eligible for Placement" %}
+
+            <div class="eligible">
+
+                <h2>✓ ELIGIBLE FOR PLACEMENT</h2>
+
+                <p>
+                    The student is predicted to be eligible
+                    for placement.
+                </p>
+
+            </div>
+
+        {% else %}
+
+            <div class="not-eligible">
+
+                <h2>✗ NOT ELIGIBLE FOR PLACEMENT</h2>
+
+                <p>
+                    The student is predicted to be
+                    not eligible for placement.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+
+        {% if confidence %}
+
+            <h3>
+                Prediction Confidence:
+                {{ confidence }}%
+            </h3>
+
+        {% endif %}
+
+
+        <h2>Student Details</h2>
+
+        <table>
+
+            <tr>
+                <th>CGPA</th>
+                <td>{{ cgpa }}</td>
+            </tr>
+
+            <tr>
+                <th>10th Percentage</th>
+                <td>{{ tenth }}%</td>
+            </tr>
+
+            <tr>
+                <th>12th Percentage</th>
+                <td>{{ twelfth }}%</td>
+            </tr>
+
+            <tr>
+                <th>Backlogs</th>
+                <td>{{ backlogs }}</td>
+            </tr>
+
+            <tr>
+                <th>Attendance</th>
+                <td>{{ attendance }}%</td>
+            </tr>
+
+            <tr>
+                <th>Internship</th>
+                <td>{{ internship }}</td>
+            </tr>
+
+            <tr>
+                <th>Projects</th>
+                <td>{{ projects }}</td>
+            </tr>
+
+            <tr>
+                <th>Communication Skill</th>
+                <td>{{ communication }}/10</td>
+            </tr>
+
+            <tr>
+                <th>Technical Skill</th>
+                <td>{{ technical }}/10</td>
+            </tr>
+
+        </table>
+
+
+        <div class="buttons">
+
+            <a href="/">
+                Predict Another Student
+            </a>
+
+            <a href="/students">
+                View Stored Students
+            </a>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>

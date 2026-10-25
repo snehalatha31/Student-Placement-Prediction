@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f8;
+
+    color: #222;
+}
+
+
+.container {
+
+    width: min(900px, 92%);
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 18px
+        rgba(0, 0, 0, 0.10);
+}
+
+
+h1 {
+
+    text-align: center;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.field {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+label {
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+
+input,
+select {
+
+    padding: 11px;
+
+    border:
+        1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+
+button,
+.back-button {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+button:hover,
+.back-button:hover {
+
+    opacity: 0.9;
+}
+
+
+.error {
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border-radius: 7px;
+
+    background: #ffe5e5;
+
+    color: #a00;
+}
+
+
+.result-container {
+
+    max-width: 700px;
+}
+
+
+.result-box {
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin: 25px 0;
+
+    border-radius: 10px;
+
+    background: #f1f1f1;
+}
+
+
+.result-box h2 {
+
+    margin-top: 0;
+}
+
+
+.probability {
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background: #f8f8f8;
+}
+
+
+.details {
+
+    display: grid;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    background: #f8f8f8;
+
+    border-radius: 8px;
+}
+
+
+@media (max-width: 650px) {
+
+    .grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .container {
+
+        padding: 20px;
+
+    }
+}
+/* --------------------------------
+   TABLE
+-------------------------------- */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+}
+
+
+th,
+td {
+
+    border: 1px solid #ddd;
+
+    padding: 10px;
+
+    text-align: center;
+
+}
+
+
+th {
+
+    background: #222;
+
+    color: white;
+
+}
+
+
+/* --------------------------------
+   ACTION BUTTONS
+-------------------------------- */
+
+.actions {
+
+    white-space: nowrap;
+
+}
+
+
+.actions a {
+
+    display: inline-block;
+
+    padding: 7px 10px;
+
+    margin: 2px;
+
+    background: #333;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+}
+
+
+.actions button {
+
+    display: inline-block;
+
+    width: auto;
+
+    margin: 2px;
+
+    padding: 7px 10px;
+
+    background: #a00;
+
+}
+
+
+/* --------------------------------
+   MOBILE TABLE
+-------------------------------- */
+
+@media (max-width: 900px) {
+
+    .container {
+
+        overflow-x: auto;
+
+    }
+
+}
